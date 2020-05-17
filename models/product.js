@@ -15,8 +15,11 @@ module.exports = class Product {
 
     fs.readFile(p, (err, fileContent) => {
       let products = [];
+      console.log(!err);
+      console.log('fileContent is: ', JSON.parse(fileContent));
 
       if (!err) {
+          console.log('in');
         products = JSON.parse(fileContent);
       }
       
